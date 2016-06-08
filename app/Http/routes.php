@@ -1,5 +1,6 @@
 <?php
 use App\User;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -17,7 +18,7 @@ $app->get('/', function () use ($app) {
 
 $app->post('/auth/login', 'AuthController@postLogin');
 
-$app->group(['middleware' => 'auth:api'], function($app)
+$app->group(['middleware' => ['auth:api']], function($app)
 {
 
     $app->get('/users', function() {
@@ -27,3 +28,8 @@ $app->group(['middleware' => 'auth:api'], function($app)
     });
 
 });
+//route to submit forgotten password
+$app->post('/recovery','recoveryController@recovery');
+// Route that uses the reset code to reset a user password
+$app->get('/resetpassword/{resetcode}','recoveryController@reset_password');
+//Route::get('resetpassword/{resetcode}','UsersController@reset_password');
