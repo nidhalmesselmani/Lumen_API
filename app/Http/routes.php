@@ -32,4 +32,4 @@ $app->group(['middleware' => ['auth:api']], function($app)
 $app->post('/recovery','recoveryController@recovery');
 // Route that uses the reset code to reset a user password
 $app->get('/resetpassword/{resetcode}','recoveryController@reset_password');
-//Route::get('resetpassword/{resetcode}','UsersController@reset_password');
+
