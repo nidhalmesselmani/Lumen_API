@@ -80,7 +80,7 @@ class recoveryController extends Controller{
                         'link' => URL::to('resetpassword', $resetcode),
                         'password' => $passwd,
                     );
-                    $email = $user->email;
+
                     //Send an e-mail to the user
                     Mail::send('auth.reminder', $data, function ($message) use ($user, $data) {
 

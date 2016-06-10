@@ -34,15 +34,13 @@ class change_passwordController extends  Controller {
 
 
                 });
-                //if everything went well,
-                // this message will be returned
+                //if everything went well, this message will be returned
                 return 'password has been changed, a notification has been sent to your email ';
             };
 
 
         }else{
-            //if the posted password is not the same as the user having the same id as the posted id,
-            // this message will be returned
+            //if the posted password is not the same as the user having the same id as the posted id, this message will be retur
             return 'password incorrect';
 
         };
