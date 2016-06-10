@@ -11,22 +11,21 @@ use App\User;
 | and give it the Closure to call when that URI is requested.
 |
 */
-
+//a route showing the Lumen version
 $app->get('/', function () use ($app) {
     return $app->version();
 });
-
+//a route to authenticate
 $app->post('/auth/login', 'AuthController@postLogin');
-
-$app->group(['middleware' => ['auth:api']], function($app)
+//protected routes
+$app->group(['namespace' => 'App\Http\Controllers','middleware' => ['auth:api']], function($group)
 {
 
-    $app->get('/users', function() {
-        return response()->json([
-            User::all()
-        ]);
-    });
 
+//a route to change the password
+    $group->post('/change', 'change_passwordController@change');
+ //a route to get the authenticated user
+    $group->get('/authuser','AuthController@getAuthenticatedUser');
 });
 //route to submit forgotten password
 $app->post('/recovery','recoveryController@recovery');

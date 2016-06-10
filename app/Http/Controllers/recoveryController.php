@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\URL;
 use App\User;
 class recoveryController extends Controller{
 
+
+
+
     public function reset_password($resetcode){
         //Grab the user record where the reset code sent in the email matches the database
         $user = User::where('resetcode','=',$resetcode)
@@ -60,7 +63,7 @@ class recoveryController extends Controller{
             $user = User::where('email','=',$request->input('email'));
 
             //if the user record exist then grab the first returned resutlt
-            if($user->count()){
+            if($user->count()) {
                 $user = $user->first();
                 //Generate a reset code and the temp password
                 $resetcode = str_random(60);
@@ -69,17 +72,17 @@ class recoveryController extends Controller{
                 $user->password_temp = Hash::make($passwd);
                 $user->resetcode = $resetcode;
                 // save reset code and temp password to the user db
-                if ($user->save()){
+                if ($user->save()) {
                     //set data array, this is the information that will be passed from the angular forgot password form
                     $data = array(
-                        'email'=>$user->email,
-                        'name'=>$user->name,
-                        'link'=>URL::to('resetpassword',$resetcode),
-                        'password'=>$passwd,
+                        'email' => $user->email,
+                        'name' => $user->name,
+                        'link' => URL::to('resetpassword', $resetcode),
+                        'password' => $passwd,
                     );
-                    $email= $user->email;
+                    $email = $user->email;
                     //Send an e-mail to the user
-                    Mail::send('auth.reminder',$data,function($message) use($user,$data){
+                    Mail::send('auth.reminder', $data, function ($message) use ($user, $data) {
 
                         $message->to($user->email, $user->name)->subject('Spare Parts Password Recovery Request');
 
@@ -88,11 +91,12 @@ class recoveryController extends Controller{
                     //inform the user to check their email
                     return response('pls check your email');
                 }
+            }
                 // If the email address doen not match an email email address in the database
                 return response('email not found');
 
 
-            }
+
 
 
 
