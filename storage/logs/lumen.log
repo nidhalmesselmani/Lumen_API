@@ -1,35 +1,132 @@
-[2016-06-10 15:13:49] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Controller' not found' in C:\xampp1\htdocs\Lumen_API\app\Http\Controllers\AuthController.php:10
+[2016-06-19 23:51:52] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Memcached' not found' in C:\xampp1\htdocs\Lumen_API\vendor\illuminate\cache\MemcachedConnector.php:51
 Stack trace:
 #0 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
 #1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
 #2 {main}  
-[2016-06-10 15:14:41] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Controller' not found' in C:\xampp1\htdocs\Lumen_API\app\Http\Controllers\AuthController.php:10
+[2016-06-22 19:30:18] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Memcached' not found' in C:\xampp1\htdocs\Lumen_API\vendor\illuminate\cache\MemcachedConnector.php:51
 Stack trace:
 #0 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
 #1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
 #2 {main}  
-[2016-06-10 15:15:31] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Controller' not found' in C:\xampp1\htdocs\Lumen_API\app\Http\Controllers\AuthController.php:10
+[2016-06-22 19:42:34] lumen.ERROR: exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'first_module.test_kpis' doesn't exist' in C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php:333
 Stack trace:
-#0 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
-#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
-#2 {main}  
-[2016-06-10 15:16:54] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Controller' not found' in C:\xampp1\htdocs\Lumen_API\app\Http\Controllers\AuthController.php:10
+#0 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php(333): PDO->prepare('select * from `...')
+#1 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php(673): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php(636): Illuminate\Database\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#3 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php(342): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#4 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Query\Builder.php(1562): Illuminate\Database\Connection->select('select * from `...', Array, true)
+#5 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Query\Builder.php(1548): Illuminate\Database\Query\Builder->runSelect()
+#6 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Eloquent\Builder.php(610): Illuminate\Database\Query\Builder->get(Array)
+#7 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Eloquent\Builder.php(316): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#8 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Eloquent\Model.php(646): Illuminate\Database\Eloquent\Builder->get(Array)
+#9 C:\xampp1\htdocs\Lumen_API\app\Http\routes.php(40): Illuminate\Database\Eloquent\Model::all()
+#10 [internal function]: Closure->{closure}()
+#11 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\container\Container.php(507): call_user_func_array(Object(Closure), Array)
+#12 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(512): Illuminate\Container\Container->call(Object(Closure), Array)
+#13 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(486): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#14 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(383): Laravel\Lumen\Application->handleFoundRoute(Array)
+#15 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Illuminate\Http\Request))
+#16 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#17 C:\xampp1\htdocs\Lumen_API\vendor\nordsoftware\lumen-cors\src\CorsMiddleware.php(38): Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 [internal function]: Nord\Lumen\Cors\CorsMiddleware->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#20 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#22 [internal function]: Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#24 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(633): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#25 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(389): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#26 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(334): Laravel\Lumen\Application->dispatch(Object(Illuminate\Http\Request))
+#27 C:\xampp1\htdocs\Lumen_API\public\index.php(27): Laravel\Lumen\Application->run(Object(Illuminate\Http\Request))
+#28 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'first_module.test_kpis' doesn't exist (SQL: select * from `test_kpis`)' in C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php:680
 Stack trace:
-#0 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
-#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
-#2 {main}  
-[2016-06-10 15:17:35] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Illuminate\Routing\Controller' not found' in C:\xampp1\htdocs\Lumen_API\app\Http\Controllers\Controller.php:7
+#0 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php(636): Illuminate\Database\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php(342): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Query\Builder.php(1562): Illuminate\Database\Connection->select('select * from `...', Array, true)
+#3 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Query\Builder.php(1548): Illuminate\Database\Query\Builder->runSelect()
+#4 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Eloquent\Builder.php(610): Illuminate\Database\Query\Builder->get(Array)
+#5 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Eloquent\Builder.php(316): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#6 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Eloquent\Model.php(646): Illuminate\Database\Eloquent\Builder->get(Array)
+#7 C:\xampp1\htdocs\Lumen_API\app\Http\routes.php(40): Illuminate\Database\Eloquent\Model::all()
+#8 [internal function]: Closure->{closure}()
+#9 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\container\Container.php(507): call_user_func_array(Object(Closure), Array)
+#10 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(512): Illuminate\Container\Container->call(Object(Closure), Array)
+#11 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(486): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#12 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(383): Laravel\Lumen\Application->handleFoundRoute(Array)
+#13 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Illuminate\Http\Request))
+#14 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#15 C:\xampp1\htdocs\Lumen_API\vendor\nordsoftware\lumen-cors\src\CorsMiddleware.php(38): Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 [internal function]: Nord\Lumen\Cors\CorsMiddleware->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#20 [internal function]: Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#22 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(633): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#23 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(389): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#24 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(334): Laravel\Lumen\Application->dispatch(Object(Illuminate\Http\Request))
+#25 C:\xampp1\htdocs\Lumen_API\public\index.php(27): Laravel\Lumen\Application->run(Object(Illuminate\Http\Request))
+#26 {main}  
+[2016-06-22 19:44:30] lumen.ERROR: exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'first_module.kpi_test' doesn't exist' in C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php:333
 Stack trace:
-#0 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
-#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
-#2 {main}  
-[2016-06-10 15:19:56] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Illuminate\Routing\Controller' not found' in C:\xampp1\htdocs\Lumen_API\app\Http\Controllers\Controller.php:7
+#0 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php(333): PDO->prepare('select * from `...')
+#1 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php(673): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php(636): Illuminate\Database\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#3 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php(342): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#4 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Query\Builder.php(1562): Illuminate\Database\Connection->select('select * from `...', Array, true)
+#5 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Query\Builder.php(1548): Illuminate\Database\Query\Builder->runSelect()
+#6 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Eloquent\Builder.php(610): Illuminate\Database\Query\Builder->get(Array)
+#7 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Eloquent\Builder.php(316): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#8 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Eloquent\Model.php(646): Illuminate\Database\Eloquent\Builder->get(Array)
+#9 C:\xampp1\htdocs\Lumen_API\app\Http\routes.php(40): Illuminate\Database\Eloquent\Model::all()
+#10 [internal function]: Closure->{closure}()
+#11 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\container\Container.php(507): call_user_func_array(Object(Closure), Array)
+#12 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(512): Illuminate\Container\Container->call(Object(Closure), Array)
+#13 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(486): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#14 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(383): Laravel\Lumen\Application->handleFoundRoute(Array)
+#15 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Illuminate\Http\Request))
+#16 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#17 C:\xampp1\htdocs\Lumen_API\vendor\nordsoftware\lumen-cors\src\CorsMiddleware.php(38): Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 [internal function]: Nord\Lumen\Cors\CorsMiddleware->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#20 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#22 [internal function]: Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#24 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(633): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#25 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(389): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#26 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(334): Laravel\Lumen\Application->dispatch(Object(Illuminate\Http\Request))
+#27 C:\xampp1\htdocs\Lumen_API\public\index.php(27): Laravel\Lumen\Application->run(Object(Illuminate\Http\Request))
+#28 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'first_module.kpi_test' doesn't exist (SQL: select * from `kpi_test`)' in C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php:680
 Stack trace:
-#0 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
-#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
-#2 {main}  
-[2016-06-10 15:22:07] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Illuminate\Routing\Controller' not found' in C:\xampp1\htdocs\Lumen_API\app\Http\Controllers\Controller.php:7
-Stack trace:
-#0 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
-#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
-#2 {main}  
+#0 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php(636): Illuminate\Database\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Connection.php(342): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Query\Builder.php(1562): Illuminate\Database\Connection->select('select * from `...', Array, true)
+#3 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Query\Builder.php(1548): Illuminate\Database\Query\Builder->runSelect()
+#4 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Eloquent\Builder.php(610): Illuminate\Database\Query\Builder->get(Array)
+#5 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Eloquent\Builder.php(316): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#6 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\database\Eloquent\Model.php(646): Illuminate\Database\Eloquent\Builder->get(Array)
+#7 C:\xampp1\htdocs\Lumen_API\app\Http\routes.php(40): Illuminate\Database\Eloquent\Model::all()
+#8 [internal function]: Closure->{closure}()
+#9 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\container\Container.php(507): call_user_func_array(Object(Closure), Array)
+#10 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(512): Illuminate\Container\Container->call(Object(Closure), Array)
+#11 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(486): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#12 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(383): Laravel\Lumen\Application->handleFoundRoute(Array)
+#13 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Illuminate\Http\Request))
+#14 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#15 C:\xampp1\htdocs\Lumen_API\vendor\nordsoftware\lumen-cors\src\CorsMiddleware.php(38): Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 [internal function]: Nord\Lumen\Cors\CorsMiddleware->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#20 [internal function]: Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 C:\xampp1\htdocs\Lumen_API\vendor\illuminate\pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#22 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(633): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#23 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(389): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#24 C:\xampp1\htdocs\Lumen_API\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(334): Laravel\Lumen\Application->dispatch(Object(Illuminate\Http\Request))
+#25 C:\xampp1\htdocs\Lumen_API\public\index.php(27): Laravel\Lumen\Application->run(Object(Illuminate\Http\Request))
+#26 {main}  

@@ -1,6 +1,6 @@
 <?php
-use App\User;
 
+use App\test_kpi;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -31,4 +31,10 @@ $app->group(['namespace' => 'App\Http\Controllers','middleware' => ['auth:api']]
 $app->post('/recovery','recoveryController@recovery');
 // Route that uses the reset code to reset a user password
 $app->get('/resetpassword/{resetcode}','recoveryController@reset_password');
+
+$app->get('/test_kpi', function () use ($app){
+    return test_kpi::all();
+
+
+});
 
