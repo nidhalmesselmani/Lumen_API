@@ -1,6 +1,8 @@
 <?php
 
 use App\test_kpi;
+use App\User;
+use App\bms_www_bits;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -26,15 +28,47 @@ $app->group(['namespace' => 'App\Http\Controllers','middleware' => ['auth:api']]
     $group->post('/change', 'change_passwordController@change');
  //a route to get the authenticated user
     $group->get('/authuser','AuthController@getAuthenticatedUser');
+
+
+
+    $group->get('/bms_www_users','UserController@getUsers');
+    $group->post('/bms_www_users/delete','UserController@destroyUser');
+    $group->post('/bms_www_users/update','UserController@updateUser');
+
+
+    $group->get('/bms_www_bits','BitsController@get');
+    $group->post('/bms_www_bits/create','BitsController@createBit');
+    $group->post('/bms_www_bits/delete','BitsController@destroyBit');
+    $group->post('/bms_www_bits/update','BitsController@updateBit');
+
+
+
+    $group->get('/bms_www_biflash','BiFlashController@get');
+    $group->post('/bms_www_biflash/create','BiFlashController@createBiFlash');
+    $group->post('/bms_www_biflash/delete','BiFlashController@destroyBiFlash');
+    $group->post('/bms_www_biflash/update','BiFlashController@updateBiFlash');
+
+
+
+    $group->get('/bms_www_bits_details','BitsDetailsController@get');
+    $group->post('/bms_www_bits_details/create','BitsDetailsController@createBitDetails');
+    $group->post('/bms_www_bits_details/delete','BitsDetailsController@destroyBitDetails');
+    $group->post('/bms_www_bits_details/update','BitsDetailsController@updateBitDetails');
+
+
 });
 //route to submit forgotten password
 $app->post('/recovery','recoveryController@recovery');
 // Route that uses the reset code to reset a user password
 $app->get('/resetpassword/{resetcode}','recoveryController@reset_password');
 
-$app->get('/test_kpi', function () use ($app){
-    return test_kpi::all();
+$app->post('/bms_www_users/create','UserController@createUser');
 
 
-});
+
+
+
+
+
+
 

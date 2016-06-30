@@ -28,7 +28,7 @@ class AuthController extends Controller
 
         try {
 //if the credentials doesn't meet any user, user not found will be returned
-            if (! $token = $this->jwt->attempt($request->only('email', 'password'))) {
+            if (! $token = $this->jwt->attempt($request->only('email','password'))) {
                 return response()->json(['user_not_found'], 404);
             }
 
@@ -51,7 +51,7 @@ class AuthController extends Controller
         //get the user having the same email as the posted email
         $user = User::where('email',$request->email)->first();
         //the last_coonection_date field will recieve the dated object
-        $user->last_connection_date = $today;
+        $user->LastConnectionDate = $today;
         //and the changes will be saved
         $user->save();
         //finally a token will be returned

@@ -13,13 +13,30 @@ class User extends Model implements JWTSubject, AuthenticatableContract, Authori
 {
     use Authenticatable, Authorizable;
 
+
+
+    protected $primaryKey = 'idUser';
+    /**
+     * The name of the "created at" column.
+     *
+     * @var string
+     */
+    const CREATED_AT = 'CreatedAt';
+
+    /**
+     * The name of the "updated at" column.
+     *
+     * @var string
+     */
+    const UPDATED_AT = 'UpdatedAt';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+    protected $table = 'bms_www_users';
     protected $fillable = [
-        'name', 'email',
+        'fk_Company','Nom','Prenom','Email','Password','PasswordTemp','isAdmin','ResetCode','LastConnectionDate'
     ];
 
     /**

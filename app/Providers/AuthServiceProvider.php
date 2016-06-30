@@ -33,7 +33,7 @@ class AuthServiceProvider extends ServiceProvider
 
         $this->app['auth']->viaRequest('api', function ($request)
         {
-            return \App\User::where('email', $request->input('email'))->first();
+            return \App\User::where('Email', $request->input('Email'))->first();
         });
     }
 }
